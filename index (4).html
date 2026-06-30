@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Everyday Income Secrets — A Simple Guide to Earning Extra Income With No Experience</title>
+<style>
+  :root{
+    --green-deep:#0E3B2E;
+    --green-darker:#0A2A21;
+    --cream:#F4F0E6;
+    --cream-dim:#D9D3C2;
+    --yellow:#E8D44D;
+    --yellow-soft:#F2E29A;
+    --line:rgba(244,240,230,0.14);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--green-deep);
+    color:var(--cream);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  @font-face{
+    font-family:'Fredoka';
+    src:local('Fredoka');
+  }
+
+  h1,h2,h3,.display{
+    font-family:'Fredoka',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(14,59,46,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    height:64px;
+  }
+  .brand{font-family:'Fredoka',sans-serif;font-size:18px;font-weight:600;}
+  .brand .accent{color:var(--yellow);}
+  .nav-cta{
+    background:var(--yellow);color:var(--green-darker);
+    padding:9px 18px;border-radius:8px;font-weight:600;font-size:14px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{padding:84px 0 70px;position:relative;overflow:hidden;}
+  .hero-grid{
+    display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;letter-spacing:0.06em;text-transform:uppercase;
+    color:var(--yellow-soft);font-weight:600;margin-bottom:20px;
+  }
+  .eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--yellow);display:inline-block;}
+
+  h1{
+    font-size:clamp(34px,4.6vw,54px);
+    line-height:1.06;
+    margin-bottom:22px;
+  }
+  h1 .hl{color:var(--yellow);}
+
+  .sub{
+    font-size:18px;color:var(--cream-dim);max-width:46ch;margin-bottom:32px;
+  }
+
+  .cta-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:18px;}
+  .btn-primary{
+    background:var(--yellow);color:var(--green-darker);
+    padding:16px 30px;border-radius:10px;font-weight:700;font-size:16px;
+    box-shadow:0 8px 24px rgba(232,212,77,0.18);
+    transition:transform .15s ease;
+    display:inline-block;
+  }
+  .btn-primary:hover{transform:translateY(-2px);}
+  .price-note{font-size:13px;color:var(--cream-dim);}
+  .launch-badge{
+    display:inline-block;background:var(--yellow);color:var(--green-darker);
+    font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;
+    padding:3px 9px;border-radius:5px;margin-right:8px;
+  }
+
+  .hero-art{
+    position:relative;
+    background:radial-gradient(circle at 30% 20%, rgba(232,212,77,0.10), transparent 60%);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:34px;
+  }
+
+  /* Bulb */
+  .bulb-wrap{display:flex;flex-direction:column;align-items:center;gap:18px;position:relative;}
+  .bulb{width:120px;height:120px;position:relative;z-index:1;animation:glow-pulse 3.5s ease-in-out infinite;}
+  @keyframes glow-pulse{
+    0%,100%{filter:drop-shadow(0 0 0px rgba(232,212,77,0));}
+    50%{filter:drop-shadow(0 0 14px rgba(232,212,77,0.55));}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .bulb{animation:none;}
+  }
+
+  /* Flow diagram inside hero card - the signature element */
+  .flow{
+    width:100%;
+    margin-top:8px;
+    display:flex;flex-direction:column;gap:0;
+  }
+  .flow-step{
+    display:flex;align-items:center;gap:14px;
+    padding:14px 0;
+  }
+  .flow-step .num{
+    width:30px;height:30px;border-radius:50%;
+    background:var(--cream);color:var(--green-darker);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:700;font-size:13px;flex-shrink:0;
+  }
+  .flow-step.active .num{background:var(--yellow);}
+  .flow-step p{font-size:14.5px;color:var(--cream-dim);}
+  .flow-step .label{color:var(--cream);font-weight:600;display:block;font-size:15px;margin-bottom:2px;}
+  .flow-line{
+    width:1px;height:18px;background:var(--line);margin-left:15px;
+  }
+
+  /* ---------- ENERGY STRIP ---------- */
+  .energy-strip{
+    background:var(--yellow);
+    padding:26px 0;
+  }
+  .energy-line{
+    color:var(--green-darker);
+    font-size:18px;
+    font-weight:600;
+    text-align:center;
+    max-width:760px;margin:0 auto;
+    line-height:1.5;
+  }
+  .energy-line .hl-num{
+    font-family:'Fredoka',sans-serif;
+    font-weight:600;
+    font-size:21px;
+  }
+
+  /* ---------- PROOF / WHO THIS IS FOR ---------- */
+  .section{padding:64px 0;}
+  .section-border-top{border-top:1px solid var(--line);}
+
+  .lede{font-size:15px;color:var(--yellow-soft);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-bottom:10px;}
+  h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:18px;max-width:24ch;}
+  .h2-sub{color:var(--cream-dim);font-size:16.5px;max-width:60ch;margin-bottom:40px;}
+
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .card{
+    background:rgba(244,240,230,0.04);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:28px;
+  }
+  .card h3{font-size:18px;margin-bottom:10px;color:var(--yellow-soft);}
+  .card p{color:var(--cream-dim);font-size:15px;}
+
+  /* ---------- WHAT YOU LEARN: the two paths ---------- */
+  .paths{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px;}
+  .path-card{
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:30px 26px;
+    background:linear-gradient(180deg, rgba(244,240,230,0.05), rgba(244,240,230,0.01));
+  }
+  .path-card.affiliate{border-color:rgba(232,212,77,0.35);}
+  .path-tag{
+    display:inline-block;font-size:12px;font-weight:700;letter-spacing:0.05em;
+    text-transform:uppercase;padding:5px 11px;border-radius:6px;margin-bottom:16px;
+  }
+  .path-tag.a{background:rgba(232,212,77,0.16);color:var(--yellow-soft);}
+  .path-tag.v{background:rgba(244,240,230,0.10);color:var(--cream-dim);}
+  .path-card h3{font-size:21px;margin-bottom:10px;}
+  .path-card p.desc{color:var(--cream-dim);font-size:14.5px;margin-bottom:18px;}
+  .path-card ul{list-style:none;}
+  .path-card li{
+    display:flex;gap:10px;align-items:flex-start;
+    font-size:14.5px;color:var(--cream);padding:7px 0;
+  }
+  .path-card li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--yellow);margin-top:8px;flex-shrink:0;}
+
+  /* ---------- MODULES ---------- */
+  .modules{margin-top:8px;}
+  .module{
+    display:grid;grid-template-columns:64px 1fr;gap:20px;
+    padding:24px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .module:last-child{border-bottom:none;}
+  .module .mnum{
+    font-family:'Fredoka',sans-serif;font-size:26px;color:var(--yellow);font-weight:600;
+  }
+  .module h3{font-size:18px;margin-bottom:6px;}
+  .module p{color:var(--cream-dim);font-size:14.5px;max-width:62ch;}
+
+  /* ---------- WHO IT'S FOR / NOT FOR ---------- */
+  .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .fit-card{border-radius:16px;padding:26px;border:1px solid var(--line);}
+  .fit-card.yes{background:rgba(232,212,77,0.06);border-color:rgba(232,212,77,0.25);}
+  .fit-card.no{background:rgba(244,240,230,0.02);}
+  .fit-card h3{font-size:15px;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:14px;}
+  .fit-card.yes h3{color:var(--yellow-soft);}
+  .fit-card.no h3{color:var(--cream-dim);}
+  .fit-card ul{list-style:none;}
+  .fit-card li{font-size:14.5px;padding:6px 0;color:var(--cream-dim);}
+
+  /* ---------- PRICE / CTA ---------- */
+  .price-section{
+    text-align:center;
+    background:radial-gradient(circle at 50% 0%, rgba(232,212,77,0.08), transparent 65%);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:78px 0;
+  }
+  .price-card{
+    max-width:440px;margin:0 auto;
+    background:var(--cream);color:var(--green-darker);
+    border-radius:20px;padding:40px 36px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.35);
+  }
+  .price-card .ptag{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#5C7A6E;margin-bottom:8px;}
+  .price-card .pval{font-family:'Fredoka',sans-serif;font-size:46px;font-weight:600;margin-bottom:4px;}
+  .price-card .pval span{font-size:18px;font-weight:600;color:#5C7A6E;}
+  .price-card .pold{font-size:14px;color:#8a9a91;text-decoration:line-through;margin-bottom:22px;}
+  .price-card ul{list-style:none;text-align:left;margin-bottom:28px;}
+  .price-card li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;padding:6px 0;color:#33473D;}
+  .price-card li::before{content:'✓';color:#1f6b4a;font-weight:700;flex-shrink:0;}
+  .price-card .btn-primary{width:100%;text-align:center;}
+  .guarantee{font-size:13px;color:var(--cream-dim);margin-top:18px;}
+
+  /* ---------- FAQ ---------- */
+  .faq-item{border-bottom:1px solid var(--line);padding:22px 0;}
+  .faq-item h3{font-size:16px;margin-bottom:8px;}
+  .faq-item p{color:var(--cream-dim);font-size:14.5px;max-width:62ch;}
+
+  footer{padding:40px 0;border-top:1px solid var(--line);}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  footer p{font-size:13px;color:var(--cream-dim);}
+
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;}
+    .two-col{grid-template-columns:1fr;}
+    .paths{grid-template-columns:1fr;}
+    .fit-grid{grid-template-columns:1fr;}
+    .module{grid-template-columns:44px 1fr;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .btn-primary{transition:none;}
+  }
+
+  /* ---------- MOTION & POLISH ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(18px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .reveal.in{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  .card, .path-card, .fit-card{
+    transition:transform .2s ease, border-color .2s ease;
+  }
+  .card:hover, .path-card:hover{
+    transform:translateY(-4px);
+    border-color:rgba(232,212,77,0.4);
+  }
+
+  .module{
+    transition:padding-left .2s ease;
+  }
+  .module:hover{
+    padding-left:8px;
+  }
+  .module:hover .mnum{color:var(--yellow-soft);}
+
+  .hero-art{
+    animation:float 6s ease-in-out infinite;
+  }
+  @keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero-art{animation:none;}
+    .reveal{opacity:1;transform:none;transition:none;}
+  }
+
+  .bulb-glow{
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at 50% 35%, rgba(232,212,77,0.22), transparent 55%);
+    pointer-events:none;
+    animation:pulse 3.5s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{opacity:0.6;}
+    50%{opacity:1;}
+  }
+
+  .price-card{
+    animation:none;
+  }
+  .price-section .price-card{
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .price-section .price-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 28px 70px rgba(0,0,0,0.42);
+  }
+</style>
+<script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
+<script type="text/javascript">
+digistorePromocode( { "product_id": 707152, "adjust_domain": true } );
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">Everyday<span class="accent">Income Secrets</span></div>
+    <a href="#price" class="nav-cta">Get the guide</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">For South Africans, no experience required</div>
+      <h1>Stop watching other people earn online. <span class="hl">Start today.</span></h1>
+      <p class="sub">Everyday Income Secrets hands you the exact, real system to earn through Digistore24 — promoting other people's products for commission, or selling your own. No fluff. No guesswork. Just the steps.</p>
+      <div class="cta-row">
+        <a href="#price" class="btn-primary">Yes, I want in — R349</a>
+      </div>
+      <p class="price-note"><span class="launch-badge">Launch price</span> Once-off payment. Instant digital access. No subscription.</p>
+    </div>
+
+    <div class="hero-art">
+      <div class="bulb-glow"></div>
+      <div class="bulb-wrap">
+        <svg class="bulb" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="100" y1="20" x2="100" y2="48" stroke="#F4F0E6" stroke-width="6" stroke-linecap="round"/>
+          <line x1="48" y1="38" x2="66" y2="56" stroke="#F4F0E6" stroke-width="6" stroke-linecap="round"/>
+          <line x1="152" y1="38" x2="134" y2="56" stroke="#F4F0E6" stroke-width="6" stroke-linecap="round"/>
+          <line x1="30" y1="92" x2="58" y2="92" stroke="#F4F0E6" stroke-width="6" stroke-linecap="round"/>
+          <line x1="170" y1="92" x2="142" y2="92" stroke="#F4F0E6" stroke-width="6" stroke-linecap="round"/>
+          <line x1="48" y1="146" x2="66" y2="128" stroke="#F4F0E6" stroke-width="6" stroke-linecap="round"/>
+          <line x1="152" y1="146" x2="134" y2="128" stroke="#F4F0E6" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="100" cy="92" r="48" stroke="#F4F0E6" stroke-width="6"/>
+          <path d="M82 134 L82 150 Q82 156 88 156 L112 156 Q118 156 118 150 L118 134" stroke="#F4F0E6" stroke-width="6" stroke-linejoin="round"/>
+          <line x1="86" y1="142" x2="114" y2="142" stroke="#F4F0E6" stroke-width="5"/>
+        </svg>
+
+        <div class="flow">
+          <div class="flow-step active">
+            <div class="num">1</div>
+            <div><span class="label">Join Digistore24</span><p>Free to set up, no product required to start</p></div>
+          </div>
+          <div class="flow-line"></div>
+          <div class="flow-step">
+            <div class="num">2</div>
+            <div><span class="label">Pick your path</span><p>Promote as an affiliate, or list your own product</p></div>
+          </div>
+          <div class="flow-line"></div>
+          <div class="flow-step">
+            <div class="num">3</div>
+            <div><span class="label">Get paid</span><p>Commission or sales land directly in your account</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="energy-strip">
+  <div class="wrap">
+    <p class="energy-line">Affiliates on Digistore24 commonly earn <span class="hl-num">30–75%</span> commission per sale. That means one R500 product sold could put <span class="hl-num">R150–R375</span> straight in your account — with zero product of your own.</p>
+  </div>
+</section>
+
+<section class="section section-border-top">
+  <div class="wrap reveal">
+    <div class="lede">The honest version</div>
+    <h2>Most "make money online" guides skip the part that actually matters.</h2>
+    <p class="h2-sub">They tell you to "pick a niche" and "drive traffic" without ever showing you the platform, the account settings, or what a real product listing looks like. This guide does the opposite — it walks you through the actual screens, step by step.</p>
+
+    <div class="two-col">
+      <div class="card">
+        <h3>No product? Start as an affiliate.</h3>
+        <p>You don't need to create anything. You pick existing products from the Digistore24 marketplace, get your unique promo link, and earn commission — sometimes 40–75% per sale — when someone buys through it.</p>
+      </div>
+      <div class="card">
+        <h3>Have something to sell? Become a vendor.</h3>
+        <p>List your own course, ebook, or service. We show you exactly how to fill in every field — pricing, affiliate commission, sales pages — so other people can promote it for you too.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-border-top">
+  <div class="wrap reveal">
+    <div class="lede">Two ways in</div>
+    <h2>Choose the path that fits where you're starting from.</h2>
+    <p class="h2-sub">You don't have to pick one forever — most people start as an affiliate, then become a vendor once they understand how the platform works from the inside.</p>
+
+    <div class="paths">
+      <div class="path-card affiliate">
+        <span class="path-tag a">Affiliate route</span>
+        <h3>Earn commission, no product needed</h3>
+        <p class="desc">Best if you're starting with zero budget and want to learn by promoting things that already exist.</p>
+        <ul>
+          <li>How to evaluate a product before promoting it</li>
+          <li>Reading commission rate, refund rate, and demand</li>
+          <li>Getting and sharing your promo link correctly</li>
+          <li>Where South Africans can realistically find buyers</li>
+        </ul>
+      </div>
+      <div class="path-card">
+        <span class="path-tag v">Vendor route</span>
+        <h3>Sell your own product, build a brand</h3>
+        <p class="desc">Best if you already have (or want to create) a course, ebook, or service to sell.</p>
+        <ul>
+          <li>Setting up your product listing field by field</li>
+          <li>Pricing and affiliate commission that attracts promoters</li>
+          <li>What a sales page and thank-you page legally need</li>
+          <li>Getting approved and making your first listing live</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-border-top">
+  <div class="wrap reveal">
+    <div class="lede">Inside the guide</div>
+    <h2>Six modules. Start to first sale.</h2>
+    <p class="h2-sub">Each module builds on the last — by the end, you'll have either your affiliate link live, or your own product listed and submitted for approval.</p>
+
+    <div class="modules">
+      <div class="module">
+        <div class="mnum">01</div>
+        <div><h3>How the money actually works</h3><p>What Digistore24 is, who pays who, and the difference between a commission and a sale. You'll set up your account, understand the dashboard, and know exactly which role — affiliate or vendor — fits your time and budget right now.</p></div>
+      </div>
+      <div class="module">
+        <div class="mnum">02</div>
+        <div><h3>Choosing your path</h3><p>A side-by-side comparison of affiliate vs. vendor: what each costs you upfront, how long until a realistic first payout, and the trade-offs nobody mentions. You'll leave this module having picked a lane with reasons, not a guess.</p></div>
+      </div>
+      <div class="module">
+        <div class="mnum">03</div>
+        <div><h3>The affiliate route, step by step</h3><p>How to read a marketplace listing properly — commission %, refund rate, EPC — so you don't waste effort promoting a product that won't convert. Then: claiming your promolink, and three realistic ways South Africans without an existing following can start sharing it today.</p></div>
+      </div>
+      <div class="module">
+        <div class="mnum">04</div>
+        <div><h3>The vendor route, step by step</h3><p>A field-by-field walkthrough of the actual product creation form — name, price, affiliate commission, sales limits — plus what your sales page and thank-you page legally need (including the required Digistore24 disclosure line) before approval.</p></div>
+      </div>
+      <div class="module">
+        <div class="mnum">05</div>
+        <div><h3>Getting your first sale</h3><p>Where to find buyers with zero ad budget: WhatsApp groups, Facebook Marketplace communities, local Facebook groups, and warm-network outreach that doesn't feel like spam. Includes a simple weekly action checklist.</p></div>
+      </div>
+      <div class="module">
+        <div class="mnum">06</div>
+        <div><h3>Scaling without the mistakes</h3><p>The most common reasons SA sellers get flagged or under-earn — missing disclosures, bad refund rates, ignoring tax obligations on income earned through the platform — and what to do differently once your first sales start coming in.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-border-top">
+  <div class="wrap reveal">
+    <div class="lede">Is this for you</div>
+    <h2>Built for people starting from zero.</h2>
+
+    <div class="fit-grid">
+      <div class="fit-card yes">
+        <h3>This is for you if</h3>
+        <ul>
+          <li>You're in South Africa and want a second income stream</li>
+          <li>You have no product yet and want to start with R0 upfront</li>
+          <li>You want clear steps, not vague "mindset" advice</li>
+          <li>You're willing to put in a few hours a week consistently</li>
+        </ul>
+      </div>
+      <div class="fit-card no">
+        <h3>This isn't for you if</h3>
+        <ul>
+          <li>You're looking for a guaranteed, overnight result</li>
+          <li>You're not willing to do any of the setup work yourself</li>
+          <li>You already run a Digistore24 vendor account successfully</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="price-section" id="price">
+  <div class="wrap reveal">
+    <div class="lede" style="text-align:center;">Ready when you are</div>
+    <h2 style="text-align:center;margin:0 auto 36px;max-width:30ch;">Your first sale starts with this one decision.</h2>
+    <div class="price-card">
+      <div class="ptag">Everyday Income Secrets — Launch Price</div>
+      <div class="pval">R349 <span>once-off</span></div>
+      <div class="pold">Regular price R499</div>
+      <ul>
+        <li>Full 6-module step-by-step guide</li>
+        <li>Affiliate route and vendor route covered</li>
+        <li>Instant digital access after purchase</li>
+        <li>Written for South African beginners</li>
+      </ul>
+      <a href="#" class="btn-primary">Get instant access now</a>
+      <p class="guarantee">Secure checkout via Digistore24. Digital product delivered instantly to your email.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-border-top">
+  <div class="wrap reveal">
+    <div class="lede">Questions</div>
+    <h2>Before you get started</h2>
+
+    <div class="faq-item">
+      <h3>Do I need money to start as an affiliate?</h3>
+      <p>No. Joining Digistore24 as an affiliate is free, and you don't pay for the products you promote — you earn a commission when someone else buys through your link.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do I need a product already made to become a vendor?</h3>
+      <p>No, but you'll need one before you can list it. The guide covers what kinds of products work well and how to get your first one ready to sell.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is this only for South Africans?</h3>
+      <p>The platform works globally, but this guide is written specifically with South African beginners in mind — payout methods, realistic budgets, and local context included.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I access the course after buying?</h3>
+      <p>You'll get instant access details sent to the email you use at checkout, handled securely through Digistore24.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand" style="font-size:15px;">Everyday<span class="accent">Income Secrets</span></div>
+    <p>&copy; 2026 Everyday Income Secrets. All sales processed securely by Digistore24.</p>
+  </div>
+</footer>
+
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>
